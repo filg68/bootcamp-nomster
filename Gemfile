@@ -71,3 +71,6 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end
 
+# Kaminari paginator gem - installed per course instructions - chose Kumari over Will Paginate
+gem 'kaminari'
+
