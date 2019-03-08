@@ -1,4 +1,6 @@
 class PlacesController < ApplicationController
+  # This line will check for a user to be logged in before allowing them to create anything.
+  before_action :authenticate_user!, only: [:new, :create]
 
   def index
     @places = Place.order("name").page(params[:page]).per(5)
@@ -10,7 +12,8 @@ class PlacesController < ApplicationController
   end
 
   def create
-    Place.create(place_params)
+    # this line passes the current user id to places when a new row is created (or something like it)
+    current_user.places.create(place_params)
     redirect_to root_path
   end
 

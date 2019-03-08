@@ -8,5 +8,7 @@ class Place < ApplicationRecord
       t.timestamps
     end
   end
+
+  belongs_to :user
   
 end
