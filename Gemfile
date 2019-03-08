@@ -74,3 +74,6 @@ end
 # Kaminari paginator gem - installed per course instructions - chose Kumari over Will Paginate
 gem 'kaminari'
 
+# Simple-for gem file for form design
+gem 'simple_form'
+
