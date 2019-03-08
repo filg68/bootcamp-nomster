@@ -77,3 +77,6 @@ gem 'kaminari'
 # Simple-for gem file for form design
 gem 'simple_form'
 
+# Font awesome icons gem
+gem "font-awesome-rails"
+
