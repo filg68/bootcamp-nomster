@@ -10,6 +10,7 @@ class Place < ApplicationRecord
   # end
 
   belongs_to :user
+  has_many :comments
 
   # used to connect to our geocoder gem
   geocoded_by :address
