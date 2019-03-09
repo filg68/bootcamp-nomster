@@ -1,6 +1,8 @@
 #!/bin/bash
 
-echo "*** Adding all changed files.\n\r"
+echo "*** Adding all changed files."
+echo " "
+
 git add --all
 
 echo "***** Committing changes to local repository"
