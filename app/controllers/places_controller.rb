@@ -64,11 +64,11 @@ class PlacesController < ApplicationController
 
   end
 
+  private
+
   def place_params
     # strips the values from the form and makes them available for use
     params.require(:place).permit(:name, :description, :address)
   end
-
-
 
 end
