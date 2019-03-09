@@ -12,7 +12,7 @@ class PlacesController < ApplicationController
   end
 
   def create
-    # this line passes the current user id to places when a new row is created (or something like it)
+    # this line passes the current user info to places when a new row is created (or something like it)
     current_user.places.create(place_params)
     redirect_to root_path
   end
@@ -25,7 +25,14 @@ class PlacesController < ApplicationController
     @place = Place.find(params[:id])
   end
 
+  def update
+    @place = Place.find(params[:id])
+    @place.update_attributes(place_params)
+    redirect_to root_path
+  end
+
   def place_params
+    # strips the values from the form and makes them available for use
     params.require(:place).permit(:name, :description, :address)
   end
 
