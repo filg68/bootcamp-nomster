@@ -83,3 +83,9 @@ gem "font-awesome-rails"
 
 # User authentication gem
 gem 'devise'
+
+# Mapping gem
+gem 'geocoder'
+
+# Gem to manage ENV variables
+gem 'figaro'
