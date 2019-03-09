@@ -1,5 +1,11 @@
 #!/bin/bash
+
+echo "*** Adding all changed files."
 git add --all
+
+echo "***** Committing changes to local repository"
 git commit -am "$1"
+
+echo "******* Updagint remote githup repository"
 git push origin master
 
