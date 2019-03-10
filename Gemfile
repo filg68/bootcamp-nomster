@@ -89,3 +89,6 @@ gem 'geocoder'
 
 # Gem to manage ENV variables
 gem 'figaro'
+
+# Gem to upload files
+gem 'carrierwave', '~> 1.0'

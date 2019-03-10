@@ -1,16 +1,9 @@
 class Place < ApplicationRecord
 
-  #  change
-  #   create.table :place do |t|
-  #     t.string :name
-  #     t.text :description
-  #     t.text :address
-  #     t.timestamps
-  #   end
-  # end
-
+  # table associations
   belongs_to :user
   has_many :comments
+  has_many :photos
 
   # used to connect to our geocoder gem
   geocoded_by :address
