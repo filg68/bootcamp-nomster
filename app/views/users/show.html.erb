@@ -25,7 +25,9 @@
     <% @user.places.each do |place| %>
       <div class="col-12 col-sm-6">
         <h2 class="text-center"><%= link_to place.name, place_path(place) %></h2>
+          <br/>
           <%= place.description %>
+          <br/>
       </div>
     <% end %>
   </div>
