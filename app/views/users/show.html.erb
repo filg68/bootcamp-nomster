@@ -19,6 +19,19 @@
 </div>
 
 <div class="booyah-box col-10 offset-1">
+  <h1 class="text-center">My Places</h1>
+  <br/><br/>
+  <div class="row">
+    <% @user.places.each do |place| %>
+      <div class="col-12 col-sm-6">
+        <h2 class="text-center"><%= link_to place.name, place_path(place) %></h2>
+          <%= place.description %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="booyah-box col-10 offset-1">
   <h1 class="text-center">My Comments</h1>
   <br/><br/>
   <div class="row">
@@ -36,3 +49,4 @@
     <% end %>
   </div>
 </div>
+
