@@ -48,8 +48,7 @@
     <% @place.photos.each do |photo| %>
       <div class="col-12 col-sm-2">
         <% if photo.picture.present? %>
-          <%= photo.picture.url %>
-          <!-- <%= image_tag photo.picture.image_url %> -->
+          <%= image_tag photo.picture.url, class: 'photo-width' %>
         <% end %>
         <% if photo.present? %>
           <b><%= photo.caption %></b> -
@@ -97,7 +96,6 @@
         <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
           <div class="modal-body">
             <%= f.input :caption %>
-            <!-- <%= f.file_field :picture %> -->
             <%= f.input :picture %>
             
           </div>
