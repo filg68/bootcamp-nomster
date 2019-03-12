@@ -29,7 +29,7 @@
         </li>
       </ul>
     </div>
-    </nav>
+    
 
     <ul class="navbar-nav">
       <% if user_signed_in? %>
@@ -50,6 +50,7 @@
         <% end %>
       </li>
     </ul>
+  </nav>
 
     <% if notice.present? %>
       <p class="alert alert-info"><%= notice %></p>
